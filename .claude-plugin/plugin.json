@@ -1,0 +1,9 @@
+{
+  "name": "nuxstep-agent-toolkit",
+  "description": "Skills e subagents públicos de engenharia da Nuxstep (formato aberto Agent Skills).",
+  "version": "0.8.0",
+  "author": {
+    "name": "Nuxstep"
+  },
+  "homepage": "https://github.com/Nuxstep-docs/nuxstep-agent-toolkit"
+}

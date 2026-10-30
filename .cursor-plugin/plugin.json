@@ -1,0 +1,8 @@
+{
+  "name": "nuxstep-agent-toolkit",
+  "description": "Skills, subagents, comandos e hooks de engenharia da Nuxstep (formato aberto Agent Skills).",
+  "version": "0.8.0",
+  "author": {
+    "name": "Nuxstep"
+  }
+}

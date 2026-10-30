@@ -1,0 +1,15 @@
+{
+  "name": "nuxstep-agent-toolkit",
+  "description": "Skills públicas de engenharia da Nuxstep.",
+  "owner": {
+    "name": "Nuxstep"
+  },
+  "plugins": [
+    {
+      "name": "nuxstep-agent-toolkit",
+      "source": "./",
+      "description": "Skills públicas de engenharia da Nuxstep (formato aberto Agent Skills).",
+      "version": "0.8.0"
+    }
+  ]
+}

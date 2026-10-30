@@ -1,0 +1,38 @@
+{
+  "name": "@nuxstep/agent-toolkit",
+  "version": "0.8.0",
+  "description": "Skills, subagents, comandos e hooks de engenharia da Nuxstep (formato aberto Agent Skills).",
+  "type": "module",
+  "bin": {
+    "nuxstep-toolkit": "./install.mjs"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nuxstep-docs/nuxstep-agent-toolkit.git"
+  },
+  "license": "SEE LICENSE IN README.md",
+  "publishConfig": {
+    "access": "public"
+  },
+  "nuxstep": {
+    "mcpUrl": "https://mcp-ai.nuxstep.com/mcp"
+  },
+  "files": [
+    "skills",
+    "agents",
+    "commands",
+    "hooks",
+    "harness",
+    "spec-kit",
+    "install.mjs",
+    "README.md",
+    ".claude-plugin",
+    ".cursor-plugin",
+    "mcp.json",
+    ".mcp.json",
+    "plugin.json"
+  ]
+}

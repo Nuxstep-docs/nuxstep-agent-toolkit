@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "nuxstep": {
+      "type": "http",
+      "url": "https://mcp-ai.nuxstep.com/mcp"
+    }
+  }
+}

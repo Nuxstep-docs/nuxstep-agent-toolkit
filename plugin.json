@@ -1,0 +1,6 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "nuxstep-agent-toolkit",
+  "version": "0.8.0",
+  "description": "Skills, subagents, comandos e hooks de engenharia da Nuxstep (formato aberto Agent Skills)."
+}
