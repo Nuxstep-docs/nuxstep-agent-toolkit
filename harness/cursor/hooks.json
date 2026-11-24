@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": "node \"__NUXSTEP_TOOLKIT_HOME__/hooks/guard-bash-cursor.mjs\""
+      }
+    ]
+  }
+}

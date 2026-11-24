@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nuxstep-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nuxstep-api
+  template:
+    metadata:
+      labels:
+        app: nuxstep-api
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+      terminationGracePeriodSeconds: 30   # app trata SIGTERM e drena conexões
+      containers:
+      - name: api
+        image: nuxstep/api:1.0.0        # semver/digest — nunca :latest
+        securityContext:
+          readOnlyRootFilesystem: true
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop: ["ALL"]
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
+        livenessProbe:
+          httpGet:
+            path: /health/liveness
+            port: 3000
+          initialDelaySeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /health/readiness
+            port: 3000
+          initialDelaySeconds: 5

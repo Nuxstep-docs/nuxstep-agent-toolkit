@@ -1,0 +1,33 @@
+{
+  "nuxstep-agent-toolkit": {
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"./hooks/guard-bash.js\"",
+            "timeout": 60
+          }
+        ]
+      },
+      {
+        "matcher": "write_to_file|write_file|replace_file_content|edit_file|multi_replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"./hooks/guard-write.js\"",
+            "timeout": 60
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "node \"./hooks/guard-stop.js\"",
+        "timeout": 60
+      }
+    ]
+  }
+}
